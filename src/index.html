@@ -7,6 +7,16 @@
     </head>
     <body>
         <h1>💖 Hello World!</h1>
-        <p>Welcome to your Electron application.</p>
+        <p id = "ele_p">Welcome to your Electron application.</p>
     </body>
+    <script>
+        const eleP = document.getElementById("ele_p");
+        console.log(eleP);
+        eleP.addEventListener("click", (event) => {
+            window.api.print(event.target.innerText + "11111111111111111");
+            console.log(event.target.innerText + "22222222222222222");
+        });
+
+
+    </script>
 </html>
