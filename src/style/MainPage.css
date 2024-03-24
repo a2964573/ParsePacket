@@ -1,0 +1,27 @@
+.body-div__container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.body-div__container > div {
+    width: 100vw;
+    height: auto;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn {
+    width: auto;
+    height: auto;
+    background: #fff;
+    padding: 0.5rem 1.5rem;
+    outline: 0.1rem solid #333;
+    border-radius: 0.5rem;
+    cursor: pointer;
+}

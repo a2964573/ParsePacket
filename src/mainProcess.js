@@ -3,12 +3,14 @@ console.log("Starting main.js");
 const { app, BrowserWindow } = require('electron');
 
 const createWindow = () => {
-    const Win = new BrowserWindow({
+    const win = new BrowserWindow({
         width: 800,
         height: 600,
     });
 
-    Win.loadFile("index.html");
+    win.webContents.openDevTools();
+
+    win.loadFile("src/index.html");
 }
 
 app.whenReady().then(() => {
