@@ -52,7 +52,11 @@
                     name = "headerInputType"
                     class = "form-radio__load"
                     checked />
-                <label for="load">불러오기</label>
+                <label 
+                    for = "load"
+                    class = "label">
+                    불러오기
+                </label>
                 <input 
                     type = "radio"
                     id = "input"
@@ -60,7 +64,9 @@
                     name = "headerInputType"
                     class = "form-radio__input"
                     checked />
-                <label for="input">직접입력</label>
+                <label 
+                    for = "input"
+                    class = "label">직접입력</label>
             </div>
             <div>
                 <span>종류</span>
@@ -99,35 +105,49 @@
                 </button>
             </div>
             <div>
-                <div>
+                <div class = "grid">
                     <span>KEY</span>
                     <textarea 
                         name="headerKey" 
                         id="headerKey"></textarea>
-                    <div>
-                        <span>구분자</span>
-                        <input 
-                            type="text"
-                            id = "headerKeyDelimiter"
-                            name = "headerKeyDelimiter" />
-                    </div>
-                </div>
-                <div>
                     <span>사이즈</span>
                     <textarea 
                         name="headerSize" 
                         id="headerSize"></textarea>
-                    <div>
-                        <span>구분자</span>
-                        <input 
-                            type="text"
-                            id = "headerSizeDelimiter"
-                            name = "headerSizeDelimiter" />
-                    </div>
+                    <span>구분자</span>
+                    <input 
+                        type="text"
+                        id = "headerKeyDelimiter"
+                        name = "headerKeyDelimiter" />
+                    <span>구분자</span>
+                    <input 
+                        type="text"
+                        id = "headerSizeDelimiter"
+                        name = "headerSizeDelimiter" />
                 </div>
             </div>
             <div>
-                <div>
+                <div class = "grid">
+                    <span>KEY</span>
+                    <textarea 
+                        name="inboundKey" 
+                        id="inboundKey"></textarea>
+                    <span>사이즈</span>
+                    <textarea 
+                        name="inboundSize" 
+                        id="inboundSize"></textarea>
+                    <span>구분자</span>
+                    <input 
+                        type="text"
+                        id = "inboundKeyDelimiter"
+                        name = "inboundKeyDelimiter" />
+                    <span>구분자</span>
+                    <input 
+                        type="text"
+                        id = "inboundSizeDelimiter"
+                        name = "inboundSizeDelimiter" />
+                </div>
+                <!-- <div>
                     <span>KEY</span>
                     <textarea 
                         name="inboundKey" 
@@ -152,7 +172,7 @@
                             id = "inboundSizeDelimiter"
                             name = "inboundSizeDelimiter" />
                     </div>
-                </div>
+                </div> -->
             </div>
             <div>
                 <span>OCCURS</span>
