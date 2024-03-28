@@ -8,229 +8,99 @@
 </head>
 <body>
     <div id = "container" class = "body-div__container">
-        <!-- !제목 / !종류(헤더, 전문) / 불러오기, 직접입력 (헤더만) / 키 / 사이즈 / 오커스 수 (바디만) / !태그 -->
-        <form action="post">
+        <form action = "post">
             <div>
-                <span>제목</span>
-                <input
-                    type = "text"
-                    id = "title"
-                    name = "title"
-                    class = form-text__title
-                    placeholder = "제목없음" />
-                </input>
+                <span class = "span">제목</span>
+                <input type = "text" id = "title" name = "title" class = "input form-text__title" placeholder = "제목없음" />
             </div>
             <div>
-                <span>종류</span>
-                <input
-                    type = "radio"
-                    id = "header"
-                    value = "header"
-                    name = "type"
-                    class = form-radio__header
-                    checked />
-                    <label for="header">
-                        헤더
-                    </label>
-                </input>
-                <input
-                    type = "radio"
-                    id = "payload"
-                    value = "payload"
-                    name = "type"
-                    class = form-radio__payload />
-                    <label for="payload">
-                        페이로드
-                    </label>
-                </input>
+                <span class = "span">종류</span>
+                <input type = "radio" id = "header" value = "header" name = "type" class = "form-radio__header" checked />
+                <label for="header">헤더</label>
+                <div class = "div-radioGroup__header">
+                    <input type = "radio" id = "load" value = "load" name = "headerInputType" class = "form-radio__load" checked />
+                    <label for = "load" class = "label">불러오기</label>
+                    <input type = "radio" id = "input" value = "input" name = "headerInputType" class = "form-radio__input" checked />
+                    <label for = "input" class = "label">직접입력</label>
+                </div>
+                <input type = "radio" id = "payload" value = "payload" name = "type" class = "form-radio__payload" />
+                <label for="payload">페이로드</label>
             </div>
             <div>
-                <input 
-                    type = "radio"
-                    id = "load"
-                    value = "load"
-                    name = "headerInputType"
-                    class = "form-radio__load"
-                    checked />
-                <label 
-                    for = "load"
-                    class = "label">
-                    불러오기
-                </label>
-                <input 
-                    type = "radio"
-                    id = "input"
-                    value = "input"
-                    name = "headerInputType"
-                    class = "form-radio__input"
-                    checked />
-                <label 
-                    for = "input"
-                    class = "label">직접입력</label>
+                <span class = "span">종류</span>
+                <input type = "checkbox" id = "inbound" name = "inbound" value = "inbound" class = "form-checkbox__inbound" />
+                <label for="inbound">INBOUND</label>
+                <input type = "checkbox" id = "outbound" name = "outbound" value = "outbound" class = "form-checkbox__outbound" />
+                <label for="outbound">OUTBOUND</label>
             </div>
             <div>
-                <span>종류</span>
-                <input 
-                    type = "checkbox"
-                    id = "inbound"
-                    name = "inbound"
-                    value = "inbound"/>
-                <label 
-                    for="inbound">
-                    INBOUND
-                </label>
-                <input 
-                    type = "checkbox"
-                    id = "outbound"
-                    name = "outbound"
-                    value = "outbound"/>
-                <label 
-                    for="outbound">
-                    OUTBOUND
-                </label>
+                <button type = "button" id = "headerFileBtn" class = "btn form-button__headerFileBtn">선택</button>
+                <span id = "headerFileTitle" class = "form-span__headerFileTitle"></span>
+                <input type="file" id = "headerFile" class = "form-file__headerFile" required disabled onchange = "onHeaderFileChange" />
             </div>
             <div>
-                <input 
-                    type="file"
-                    id = "headerFile"
-                    required 
-                    disabled
-                    onchange = "onHeaderFileChange" />
-                <span id = "headerFileTitle"></span>
-                <button
-                    type = "button"
-                    id = "headerFileBtn"
-                    class = "btn form-button__headerFileBtn">
-                    선택하기
-                </button>
-            </div>
-            <div>
+                <span class = "span span form-span__title">HEADER</span>
                 <div class = "grid">
-                    <span>KEY</span>
-                    <textarea 
-                        name="headerKey" 
-                        id="headerKey"></textarea>
-                    <span>사이즈</span>
-                    <textarea 
-                        name="headerSize" 
-                        id="headerSize"></textarea>
-                    <span>구분자</span>
-                    <input 
-                        type="text"
-                        id = "headerKeyDelimiter"
-                        name = "headerKeyDelimiter" />
-                    <span>구분자</span>
-                    <input 
-                        type="text"
-                        id = "headerSizeDelimiter"
-                        name = "headerSizeDelimiter" />
+                    <span class = "span">KEY</span>
+                    <textarea name = "headerKey"  id = "headerKey" class = "txtArea"></textarea>
+                    <span class = "span">사이즈</span>
+                    <textarea name = "headerSize" id = "headerSize" class = "txtArea"></textarea>
+                    <span class = "span">구분자</span>
+                    <input type = "text" id = "headerKeyDelimiter" name = "headerKeyDelimiter" class = "input" maxlength = "1" />
+                    <span class = "span">구분자</span>
+                    <input type = "text" id = "headerSizeDelimiter" name = "headerSizeDelimiter" class = "input" maxlength = "1" />
                 </div>
             </div>
             <div>
+                <span class = "form-span__title">INBOUND</span>
                 <div class = "grid">
                     <span>KEY</span>
-                    <textarea 
-                        name="inboundKey" 
-                        id="inboundKey"></textarea>
+                    <textarea name = "inboundKey" id = "inboundKey" class = "txtArea"></textarea>
+                    <span class = "span">사이즈</span>
+                    <textarea name = "inboundSize" id = "inboundSize" class = "txtArea"></textarea>
+                    <span class = "span">구분자</span>
+                    <input type="text" id = "inboundKeyDelimiter" name = "inboundKeyDelimiter" class = "input" maxlength = "1" />
+                    <span class = "span">구분자</span>
+                    <input type="text" id = "inboundSizeDelimiter" name = "inboundSizeDelimiter"  class = "input" maxlength = "1" />
+                </div>
+            </div>
+            <div>
+                <span class = "span">OCCURS</span>
+                <input type = "radio" id = "inOccursY" value = "inOccursY" name = "inOccurs" />
+                <label for="inOccursY">배열있음</label>
+                <input type = "number" id = "inOccursNum" name = "inOccursNum" class = "input" />
+                <input type = "radio" id = "inOccursN" value = "inOccursN" name = "inOccurs" checked />
+                <label for="inOccursN">배열없음</label>
+            </div>
+            <div>
+                <span class = "form-span__title">INBOUND OCCURS</span>
+                <div id = "inboundOccursBox"></div>
+            </div>
+            <div>
+                <span class = "form-span__title">OUTBOUND</span>
+                <div class = "grid">
+                    <span>KEY</span>
+                    <textarea name="outboundKey" id="outboundKey" class = "txtArea"></textarea>
                     <span>사이즈</span>
-                    <textarea 
-                        name="inboundSize" 
-                        id="inboundSize"></textarea>
+                    <textarea name="outboundSize" id="outboundSize" class = "txtArea"></textarea>
                     <span>구분자</span>
-                    <input 
-                        type="text"
-                        id = "inboundKeyDelimiter"
-                        name = "inboundKeyDelimiter" />
+                    <input type="text" id = "outboundKeyDelimiter" name = "outboundKeyDelimiter" class = "input" maxlength = "1" />
                     <span>구분자</span>
-                    <input 
-                        type="text"
-                        id = "inboundSizeDelimiter"
-                        name = "inboundSizeDelimiter" />
+                    <input type="text" id = "outboundSizeDelimiter" name = "outboundSizeDelimiter" class = "input" maxlength = "1" />
                 </div>
             </div>
             <div>
                 <span>OCCURS</span>
-                <input 
-                    type = "radio"
-                    id = "inOccursY"
-                    value = "inOccursY"
-                    name = "inOccurs" />
-                <label 
-                    for="inOccursY">
-                    배열있음
-                </label>
-                <input 
-                    type = "number"
-                    id = "inOccursNum"
-                    name = "inOccursNum" />
-                <input 
-                    type = "radio"
-                    id = "inOccursN"
-                    value = "inOccursN"
-                    name = "inOccurs"
-                    checked />
-                <label 
-                    for="inOccursN">
-                    배열없음
-                </label>
-            </div>
-            <div>zzzzzzzzz</div>
-            <div>
-                
-                <!-- <div>
-                    <span>KEY</span>
-                    <textarea 
-                        name="outboundKey" 
-                        id="outboundKey"></textarea>
-                    <div>
-                        <span>구분자</span>
-                        <input 
-                            type="text"
-                            id = "outboundKeyDelimiter"
-                            name = "outboundKeyDelimiter" />
-                    </div>
-                </div>
-                <div>
-                    <span>사이즈</span>
-                    <textarea 
-                        name="outboundSize" 
-                        id="outboundSize"></textarea>
-                    <div>
-                        <span>구분자</span>
-                        <input 
-                            type="text"
-                            id = "outboundSizeDelimiter"
-                            name = "outboundSizeDelimiter" />
-                    </div>
-                </div> -->
+                <input type = "radio" id = "outOccursY" value = "outOccursY" name = "outOccurs" />
+                <label for="outOccursY">배열있음</label>
+                <input type = "number" id = "outOccursNum" name = "outOccursNum" class = "input" />
+                <input type = "radio" id = "outOccursN" value = "outOccursN" name = "outOccurs" checked />
+                <label for="outOccursN">배열없음</label>
             </div>
             <div>
-                <span>OCCURS</span>
-                <input 
-                    type = "radio"
-                    id = "outOccursY"
-                    value = "outOccursY"
-                    name = "outOccurs" />
-                <label 
-                    for="outOccursY">
-                    배열있음
-                </label>
-                <input 
-                    type = "number"
-                    id = "outOccursNum"
-                    name = "outOccursNum" />
-                <input 
-                    type = "radio"
-                    id = "outOccursN"
-                    value = "outOccursN"
-                    name = "outOccurs"
-                    checked />
-                <label 
-                    for="outOccursN">
-                    배열없음
-                </label>
+                <span class = "form-span__title">OUTBOUND OCCURS</span>
+                <div id = "outboundOccursBox"></div>
             </div>
-            <div>zzzzzzzzzz</div>
         </form>
     </div>
     <script src = "../render/SavePage.js"></script>
