@@ -1,7 +1,6 @@
 body {
     width: 100%;
     height: 100%;
-    overflow-y: overlay;
 }
 
 .body-div__container {
@@ -67,6 +66,21 @@ form > div > span,
     height: 100%;
 }
 
+.form-button__headerFileBtn {
+    width: auto;
+    height: auto;
+    padding: 0 .5rem;
+    border: none;
+    border-radius: 0.2rem;
+    outline: 0.1rem solid #333;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.form-button__headerFileBtn:hover {
+    background-color: #ddd;
+}
+
 .txtArea {
     resize: none;
     height: auto;
@@ -74,6 +88,24 @@ form > div > span,
 }
 
 .div-radioGroup__header {
+    width: 0;
+    overflow: hidden;
     display: flex;
     align-items: center;
+    gap: 0.2rem;
+}
+
+.div-radioGroup__header > label {
+    text-wrap: nowrap;
+}
+
+.form-span__title {
+    min-width: 7rem;
+}
+
+.form-number__occurs {
+    width: 0;
+    max-width: 5rem;
+    overflow: hidden;
+    visibility: hidden;
 }
