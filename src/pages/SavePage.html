@@ -15,18 +15,14 @@
             </div>
             <div>
                 <span class = "form-span__title">헤더</span>
-                <input type = "checkbox" id = "header" name = "type" value = "header" class = "form-checkbox__header" checked />
+                <input type = "checkbox" id = "header" name = "type" value = "header" class = "form-checkbox__header" />
                 <label for="header">포함여부</label>
-                <!-- <input type = "radio" id = "header" value = "header" name = "type" class = "form-radio__header" checked /> -->
-                <!-- <label for="header">헤더포함</label> -->
                 <div class = "div-radioGroup__header" id = "headerType">
                     <input type = "radio" id = "load" value = "load" name = "headerInputType" class = "form-radio__load" />
                     <label for = "load">불러오기</label>
-                    <input type = "radio" id = "input" value = "input" name = "headerInputType" class = "form-radio__input" checked />
+                    <input type = "radio" id = "input" value = "input" name = "headerInputType" class = "form-radio__input" />
                     <label for = "input">직접입력</label>
                 </div>
-                <!-- <input type = "radio" id = "noheader" value = "noheader" name = "type" class = "form-radio__noheader" /> -->
-                <!-- <label for="noheader">헤더미포함</label> -->
             </div>
             <div>
                 <span class = "form-span__title">바디</span>
@@ -67,15 +63,15 @@
                     <input type="text" id = "inboundSizeDelimiter" name = "inboundSizeDelimiter"  class = "input" maxlength = "1" />
                 </div>
             </div>
-            <div>
+            <div id = "inboundOccurs">
                 <span class = "form-span__title">OCCURS</span>
                 <input type = "radio" id = "inOccursY" value = "inOccursY" name = "inOccurs" />
                 <label for="inOccursY">배열있음</label>
                 <input type = "number" id = "inOccursNum" name = "inOccursNum" class = "input form-number__occurs" />
-                <input type = "radio" id = "inOccursN" value = "inOccursN" name = "inOccurs" checked />
+                <input type = "radio" id = "inOccursN" value = "inOccursN" name = "inOccurs" />
                 <label for="inOccursN">배열없음</label>
             </div>
-            <div>
+            <div id = "inputInboundOccurs">
                 <span class = "form-span__title">INBOUND OCCURS</span>
                 <div id = "inboundOccursBox"></div>
             </div>
@@ -92,15 +88,15 @@
                     <input type="text" id = "outboundSizeDelimiter" name = "outboundSizeDelimiter" class = "input" maxlength = "1" />
                 </div>
             </div>
-            <div>
+            <div id = "outboundOccurs">
                 <span class = "form-span__title">OCCURS</span>
                 <input type = "radio" id = "outOccursY" value = "outOccursY" name = "outOccurs" />
                 <label for="outOccursY">배열있음</label>
                 <input type = "number" id = "outOccursNum" name = "outOccursNum" class = "input form-number__occurs" />
-                <input type = "radio" id = "outOccursN" value = "outOccursN" name = "outOccurs" checked />
+                <input type = "radio" id = "outOccursN" value = "outOccursN" name = "outOccurs" />
                 <label for="outOccursN">배열없음</label>
             </div>
-            <div>
+            <div id = "inputOutboundOccurs">
                 <span class = "form-span__title">OUTBOUND OCCURS</span>
                 <div id = "outboundOccursBox"></div>
             </div>
